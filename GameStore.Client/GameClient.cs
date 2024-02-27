@@ -10,7 +10,7 @@ public static class GameClient
         {
             Id = 1,
             Name = "Street Fighter II",
-            Genre = "Fighthing",
+            Genre = "Fighting",
             Price = 19.99M,
             ReleaseDate = new DateTime(1991, 2, 1)
         },
@@ -60,5 +60,10 @@ public static class GameClient
         existingGame.ReleaseDate = updateGame.ReleaseDate;
     }
 
+    public static void DeleteGame(int id)
+    {
+        Game game = GetGame(id);
+        games.Remove(game);
+    }
 
 }
